@@ -49,7 +49,6 @@
                             echo "Player won the game";
                         }
                         break;
-    
                     case 3:
                         $this->Start_Position -= $this->diceNum;
                         if($this->Start_Position < 0){
