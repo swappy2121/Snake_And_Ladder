@@ -55,7 +55,7 @@
                             $this->positionOfPlayer1 += $this->diceNum;
                        
                             if($this->positionOfPlayer1 < 100){
-                                echo "Previous Position of player1 :   $this->previousPosition1      Start Position of player1 :  $this->positionPlayer1  \n";
+                                echo "Previous Position of player1 :   $this->previousPosition1      Start Position of player1 :  $this->positionOfPlayer1  \n";
                             }
                             elseif($this->positionOfPlayer1 > 100){
                                 $this->positionOfPlayer1 = $this->previousPosition1;
@@ -120,7 +120,7 @@
     
     $Game_Operation = new SankeAndLadder();
     $Game_Operation->welcomeWindow();
-    while($Game_Operation->Start_Position < 100){
+    while($Game_Operation->positionOfPlayer1 < 100 && $Game_Operation->positionOfPlayer2 < 100){
         $Game_Operation->rollDice();
         $choice = $Game_Operation->optionCheck();
         $Game_Operation->nextMove($choice);
